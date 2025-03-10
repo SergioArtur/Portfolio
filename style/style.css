@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+BR:wght@100..400&family=Playwrite+CL:wght@100..400&display=swap');/* importando fonte do Google Fonts */
+
+/*Um atalho que pode facilitar muito o processo de alterar as cores em todo o código para atribuir em seu lugar a variável é o "ctrl + D". Basta selecionar o que deseja mudar com o mouse e em seguida clicar em "ctrl + D" até que todos os valores que você deseja alterar estejam selecionados. Isso irá permitir mudar ao mesmo tempo todos os valores seguintes que sejam iguais ao que você selecionou com o mouse.*/
+
+:root { /*definindo variáveis globais para uso no css*/
+/*para uso de paletas de cores o https://colorhunt.co/ é excelente e o https://color.adobe.com/pt/create/color-wheel
+ou https://cursos.alura.com.br/course/html-css-ambiente-arquivos-tags/task/120614*/
+/*Variáveis de cor seguindo o padrão*/   
+    --cor-primaria: #000000; /* cor preta */
+    --cor-secundaria: #F6F6F6; /* cores em hexadecimal branca */
+    --cor-terciaria: #22D4FD; /* cor azul */
+    --cor-hover: #272727; /* cor azul escuro */
+/*Variáveis para fontes*/
+    --font-primaria: 'Krona One', sans-serif; /* fonte do Google Fonts */
+    --font-secundaria: 'Montserrat', sans-serif; /* fonte do Google Fonts */
+    --font-terciaria: 'Playwrite BR', cursive; /* fonte do Google Fonts */
+    --font-quaternaria: 'Playwrite CL', cursive; /* fonte do Google Fonts */
+    
+}
+
+* { /*Seleciona todos os elmentos/conteúdos do HTML*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-primaria); /* cor de fundo preta*/
+    color: var(--cor-secundaria); /* cores em hexadecimal branca */
+    box-sizing: border-box; /* faz com que o padding e a borda não aumentem o tamanho do elemento (não saindo do body que é o que desejamos)*/
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 7%; /* espaçamento: Superior Direito Inferior Esquerdo*/
+
+}
+
+.cabecalho__menu{/* "tag nav" de navegação */
+    display: flex;
+    flex-wrap: wrap; /* espaço entre os itens */
+    padding: 2% 0% 0% 8.5%; /* espaçamento: Superior Direito Inferior Esquerdo*/
+    justify-content: flex-start; /* espaço entre os itens */
+    gap: 1rem;/* espaço entre os itens */
+}
+
+.cabecalho__menu__link{
+    font-family: var(--font-secundaria); /* fonte do Google Montserrat */
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria); /* cor azul */
+    text-decoration: none;
+}
+
+.cabecalho__menu__link:hover { /* efeito ao passar o mouse */
+    background-color: var(--cor-terciaria); /* cor azul escuro */
+    color: var(--cor-hover); /* cor branca */
+    cursor: pointer; /*muda o estilo do cursor para uma mão com o indicador levantado*/
+    border-radius: 0.5rem; /* arredondamento da borda */
+}
+
+a {
+    color: var(--cor-terciaria); /* cor azul */
+}
+
+span {
+    font-weight: bold; /* negrito */
+    color: var(--cor-terciaria); /* cor azul */
+    border: 0.0625rem solid var(--cor-terciaria); /* borda */
+    padding: 0.0625rem; /* espaçamento */
+    border-radius: 0.3125rem;/* arredondamento da borda */
+}
+
+.apresentacao {
+    display: flex; /* usando o flexbox */
+    align-items: center; /* alinhando os itens no centro com base nos itens utilizados. */
+    justify-content: space-between; /* espaço entre os itens */
+    padding: 4% 15%; /* espaçamento: 1º Superior/inferior e 2º para as laterais */
+    gap: 5.125rem; /* espaço entre os itens */
+
+}
+
+.apresentacao__conteudo {
+    width: 50%; /* largura */
+    display: flex; /* usando o flexbox */
+    flex-direction: column; /* direção dos itens no modo de colunas*/
+    gap: 2.5rem; /* espaço entre os itens */
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem; /* tamanho da fonte */
+    font-family: var(--font-primaria); /* fonte do Google Krona One */
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria); /* cor em hexadecimal */
+}
+
+.apresentacao__conteudo__paragrafo {
+    font-size: 1.5rem; /* tamanho da fonte */
+    font-family: var(--font-secundaria); /* fonte do Google Montserrat */
+}
+
+.apresentacao__links{ /*classe div para os gerar dois blocos para os botões*/
+    display: flex; /* usando o flexbox */
+    flex-direction: column; /* direção dos itens (em colunas) */
+    justify-content: space-between; /* espaço entre os itens */
+    align-items: center; /* alinhando os itens no centro com base nos itens utilizados. */
+    gap: 2rem; /* espaço entre os itens */
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--font-primaria); /* fonte do Google Krona One */
+    font-weight: 400;/* peso da fonte */
+    font-size: 1.5rem; /* tamanho da fonte */
+}
+
+.apresentacao__links__redesocial{ /* classe para os links (botões das redes sociais) */
+    display: flex;
+    justify-content: center;
+    text-align: center; /* alinhamento do texto */
+    width: 65%; /* largura dos botões */
+    padding: 1.34rem 0; /* espaçamento */
+    color: var(--cor-secundaria); /* cor da fonte */
+    font-size: 1.5rem;
+    font-family: var(--font-secundaria); /* fonte do Google Montserrat */
+    font-weight: 600;/* peso da fonte */
+    text-decoration: none; /* sem decoração (remove o sublinhado/decoração que indica um link) */
+    border: 0.125rem solid var(--cor-terciaria); /* borda */
+    border-radius: 0.5rem; /* arredondamento da borda */
+    gap: 1rem;
+}
+
+.apresentacao__links__redesocial:hover { /* efeito ao passar o mouse */
+    background-color: var(--cor-hover); /* cor azul escuro */
+    color: var(--cor-secundaria); /* cor branca */
+    cursor: pointer; /*muda o estilo do cursor para uma mão com o indicador levantado*/
+}
+
+.apresentacao__imagem{
+    width: 50%; /* largura */
+}
+
+.rodape{
+    color: var(--cor-primaria); /* cor preta */
+    background-color: var(--cor-terciaria); /* cor azul */
+    padding: 1.43rem;
+    text-align: center;
+    font-family: var(--font-terciaria); /* fonte do Google Playwrite BR */
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (min-width: 30rem) and (max-width: 75rem) { /*Dentro das chaves temos uma condição de 480px até 1200px telas para Tablets e telas menores*/
+
+    .cabecalho{
+        padding: 5% 0% 0% 20.5%; /* espaçamento: Superior Direito Inferior Esquerdo*/
+    }
+
+    .cabecalho__menu{
+        width: 57%;
+        flex-direction: row; /* direção dos itens no modo de colunas */
+        gap: 0.5rem; /* espaço entre os itens */
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse; /* direção dos itens no modo de colunas invertidas que é que desejamos.*/
+        padding: 4% 5%; /* espaçamento: Superior Direito */
+    }
+
+    .apresentacao__conteudo{
+        box-sizing: border-box; /* faz com que o padding e a borda não aumentem o tamanho do elemento (não saindo do body que é o que desejamos)*/
+        width: 78%; /* largura */
+        width: auto; /* pega toda largura removando a configuração padrão*/
+    }
+
+}
+
+@media (min-width: 13.5rem) and (max-width: 29.9rem){ /* 216px minimo até 478px*/
+
+    .apresentacao{
+        padding: 2% 2%; /* espaçamento: Horizontal e Lateral */
+    }
+
+    .apresentacao__links__redesocial{
+        width: 100%; /* largura */
+        box-sizing: content-box; /* faz com que o padding e a borda aumentem o tamanho do elemento */
+    }
+
+    .rodape{
+        width: 100%; /* largura */
+    }
+}

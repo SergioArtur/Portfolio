@@ -1,0 +1,39 @@
+<!DOCTYPE html> <!-- indica que é um HTML5 -->
+ <html lang="pt-br"> <!-- indica o elemento raiz de uma página HTML, e a linguagem do que o site está usando Português do Brasil -->
+   <head> <!-- cabeçalho do documento onde ficam as informações do documento -->
+      <meta charset="UTF-8"> <!-- define o conjunto de caracteres (em Português do Brasil e de outros idiomas) que o documento deve usar -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- define a versão do Internet Explorer que o documento deve usar -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- define a largura da página e a escala inicial em qualquer dispositivo que esteja abrindo, IPad, celular ou PC-->
+        <title>Portifólio</title> <!-- define o título do documento que ficará na aba do navegador -->
+      <link rel="stylesheet" href="./style/style.css"> <!-- Define o arquivo de estilo que será usado -->
+   </head>
+   <body>
+    <header class="cabecalho"> <!--Cabeçalho da página-->
+      <nav class="cabecalho__menu">
+        <a class="cabecalho__menu__link" href="index.html">Home</a>
+        <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+        <a class="cabecalho__menu__link" href="curriculo.html">Meu Currículo</a>
+      </nav>
+    </header>
+    <main class="apresentacao"> <!--Conteúdo principal-->
+      <section class="apresentacao__conteudo"> <!--Criado uma sessão no Flexbox para separar o texto da imagem-->
+           <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Front-end de qualidade!</strong></h1>
+            <p class="apresentacao__conteudo__paragrafo">Olá! <span>Sou Luna LoveGood,</span> desenvolvedora Front-end com especialidade em React, HTML e CSS. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?</p>
+       <div class="apresentacao__links"> <!--Criado uma div para colocar os links das redes sociais-->
+        <h2 class="apresentacao__links__subtitulo">Acesse minhas redes:</h2>
+        <a class="apresentacao__links__redesocial" href="https://github.com/SergioArtur">
+          <img class="apresentacao__links__redesocial___icone" src="./assets/github.png" alt="imagem do Github">Github</a><!--Tag âncora + um link de redirecionamento com o href=""-->
+        <a class="apresentacao__links__redesocial" href="https://www.linkedin.com/in/sergio-artur">
+          <img class="apresentacao__links__redesocial___icone" src="./assets/linkedin.png" alt="imagem do Linkedin">Linkedin</a>
+        <a class="apresentacao__links__redesocial" href="https://learn.microsoft.com/pt-br/users/sergioartur-1985/"><img src="./assets/Windows.png" alt="imagem da Microsoft">Selos/Troféus</a>
+        <a class="apresentacao__links__redesocial" href="https://learn.microsoft.com/pt-br/users/sergioartur-1985/credentials/2bb3ea7c5fb2b90f">
+          <img class="apresentacao__links__redesocial___icone" src="./assets/Certificacao.png" alt="imagem das Certificação">Certificações</a>
+      </div>
+      </section>
+      <img class="apresentacao__imagem" src="/assets/Luna.png" alt="Foto da Luna"> <!--Tag de imagem + um caminho para a imagem com o src=""-->
+    </main>
+    <footer class="rodape"> <!--Rodapé da página-->
+      <p>Desenvolvido por Sérgio Artur</p>
+    </footer>
+   </body>
+ </html>
