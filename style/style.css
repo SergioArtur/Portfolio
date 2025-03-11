@@ -177,7 +177,7 @@ span {
 @media (min-width: 13.5rem) and (max-width: 29.9rem){ /* 216px minimo até 478px*/
 
     .apresentacao{
-        padding: 2% 2%; /* espaçamento: Horizontal e Lateral */
+        width: auto;/* pega toda largura removando a configuração padrão é o mesmo que colocar 100%*/
     }
 
     .apresentacao__links__redesocial{
