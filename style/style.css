@@ -170,6 +170,7 @@ span {
     .apresentacao__links__redesocial{
         width: 100%; /* largura */
         box-sizing:content-box; /* faz com que o padding e a borda aumentem o tamanho do elemento */
+        font-size: clamp(1.5rem, 5vw, 2.25rem); 
     }
 
     .rodape{
