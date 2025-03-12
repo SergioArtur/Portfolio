@@ -168,7 +168,6 @@ span {
 
     .apresentacao__conteudo{
         box-sizing: border-box; /* faz com que o padding e a borda não aumentem o tamanho do elemento (não saindo do body que é o que desejamos)*/
-        width: 78%; /* largura */
         width: auto; /* pega toda largura removando a configuração padrão*/
     }
 
