@@ -145,7 +145,7 @@ span {
     font-weight: 400;
 }
 
-@media (min-width: 12rem) and (max-width: 75rem) { /*Dentro das chaves temos uma condição de 480px até 1200px telas para Tablets e telas menores*/
+@media (min-width: 18.9375rem) and (max-width: 75rem) { /*Dentro das chaves temos uma condição de 303px até 1200px telas para Tablets e telas menores*/
 
     .cabecalho{
         padding: 5% 5% 0% 5%; /* espaçamento: Superior Direito Inferior Esquerdo*/
@@ -169,7 +169,7 @@ span {
 
     .apresentacao__links__redesocial{
         width: 100%; /* largura */
-        box-sizing: content-box; /* faz com que o padding e a borda aumentem o tamanho do elemento */
+        box-sizing:content-box; /* faz com que o padding e a borda aumentem o tamanho do elemento */
     }
 
     .rodape{
