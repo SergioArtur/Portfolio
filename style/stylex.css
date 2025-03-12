@@ -11,35 +11,40 @@ ou https://cursos.alura.com.br/course/html-css-ambiente-arquivos-tags/task/12061
     --cor-terciaria: #22D4FD; /* cor azul */
     --cor-hover: #272727; /* cor azul escuro */
 /*Variáveis para fontes*/
-    --font-primaria: 'Krona One', sans-serif; /* fonte do Google Fonts */
-    --font-secundaria: 'Montserrat', sans-serif; /* fonte do Google Fonts */
-    --font-terciaria: 'Playwrite BR', cursive; /* fonte do Google Fonts */
-    --font-quaternaria: 'Playwrite CL', cursive; /* fonte do Google Fonts */
+    --fonte-primaria: 'Krona One', sans-serif; /* fonte do Google Fonts */
+    --fonte-secundaria: 'Montserrat', sans-serif; /* fonte do Google Fonts */
+    --fonte-terciaria: 'Playwrite BR', cursive; /* fonte do Google Fonts */
+    --fonte-quaternaria: 'Playwrite CL', cursive; /* fonte do Google Fonts */
     
 }
 
 * { /*Seleciona todos os elmentos/conteúdos do HTML*/
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* faz com que o padding e a borda não aumentem o tamanho do elemento (não saindo do body que é o que desejamos)*/
+}
+
+body {
+    box-sizing: border-box;/* faz com que o padding e a borda não aumentem o tamanho do elemento (não saindo do body que é o que desejamos)*/
+    background-color: var(--cor-primaria); /* cor de fundo preta*/
+    color: var(--cor-secundaria); /* cores em hexadecimal branca */
 }
 
 .cabecalho{
-    padding: 2% 0% 0% 15%; /* espaçamento: Superior Direito Inferior Esquerdo*/
+    padding: 2% 0% 0% 7%; /* espaçamento: Superior Direito Inferior Esquerdo*/
 
 }
 
 .cabecalho__menu{/* "tag nav" de navegação */
     display: flex;
-    /*flex-wrap: wrap; /* espaço entre os itens */
-    /*padding: 2% 0% 0% 8.5%; /* espaçamento: Superior Direito Inferior Esquerdo*/
-    /*justify-content: flex-start; /* espaço entre os itens */
-    gap: 1rem;/* espaço entre os itens */
+    flex-wrap: wrap; /* espaço entre os itens */
+    padding: 2% 0% 0% 8.5%; /* espaçamento: Superior Direito Inferior Esquerdo*/
+    justify-content: flex-start; /* espaço entre os itens */
+    gap: 5rem;/* espaço entre os itens */
 }
 
 .cabecalho__menu__link{
-    font-family: var(--font-secundaria); /* fonte do Google Montserrat */
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-family: var(--fonte-secundaria); /* fonte do Google Montserrat */
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--cor-terciaria); /* cor azul */
     text-decoration: none;
@@ -52,10 +57,8 @@ ou https://cursos.alura.com.br/course/html-css-ambiente-arquivos-tags/task/12061
     border-radius: 0.5rem; /* arredondamento da borda */
 }
 
-body {
-    background-color: var(--cor-primaria); /* cor de fundo preta*/
-    color: var(--cor-secundaria); /* cores em hexadecimal branca */
- 
+a {
+    color: var(--cor-terciaria); /* cor azul */
 }
 
 span {
@@ -71,7 +74,8 @@ span {
     align-items: center; /* alinhando os itens no centro com base nos itens utilizados. */
     justify-content: space-between; /* espaço entre os itens */
     padding: 4% 15%; /* espaçamento: 1º Superior/inferior e 2º para as laterais */
-    gap: 5rem; /* espaço entre os itens */
+    gap: 82px; /* espaço entre os itens */
+
 }
 
 .apresentacao__conteudo {
@@ -82,8 +86,8 @@ span {
 }
 
 .apresentacao__conteudo__titulo {
-    font-size: clamp(1.5rem, 5vw, 2.25rem); /* tamanho da fonte responsiva (valor mínimo, valor preferencial e valor máximo usando a função "clamp")*/
-    font-family: var(--font-primaria); /* fonte do Google Krona One */
+    font-size: 2.25rem; /* tamanho da fonte */
+    font-family: var(--fonte-primaria); /* fonte do Google Krona One */
 }
 
 .titulo-destaque {
@@ -91,8 +95,8 @@ span {
 }
 
 .apresentacao__conteudo__paragrafo {
-    font-size: clamp(1rem, 3vw, 1.5rem); /* tamanho da fonte */
-    font-family: var(--font-secundaria); /* fonte do Google Montserrat */
+    font-size: 1.5rem; /* tamanho da fonte */
+    font-family: var(--fonte-secundaria); /* fonte do Google Montserrat */
 }
 
 .apresentacao__links{ /*classe div para os gerar dois blocos para os botões*/
@@ -104,9 +108,9 @@ span {
 }
 
 .apresentacao__links__subtitulo {
-    font-family: var(--font-primaria); /* fonte do Google Krona One */
+    font-family: var(--fonte-primaria); /* fonte do Google Krona One */
     font-weight: 400;/* peso da fonte */
-    font-size: clamp(1rem, 3vw, 1.5rem); /* tamanho da fonte */
+    font-size: 1.5rem; /* tamanho da fonte */
 }
 
 .apresentacao__links__redesocial{ /* classe para os links (botões das redes sociais) */
@@ -116,8 +120,8 @@ span {
     width: 65%; /* largura dos botões */
     padding: 1.34rem 0; /* espaçamento */
     color: var(--cor-secundaria); /* cor da fonte */
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    font-family: var(--font-secundaria); /* fonte do Google Montserrat */
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria); /* fonte do Google Montserrat */
     font-weight: 600;/* peso da fonte */
     text-decoration: none; /* sem decoração (remove o sublinhado/decoração que indica um link) */
     border: 0.125rem solid var(--cor-terciaria); /* borda */
@@ -140,40 +144,8 @@ span {
     background-color: var(--cor-terciaria); /* cor azul */
     padding: 1.43rem;
     text-align: center;
-    font-family: var(--font-terciaria); /* fonte do Google Playwrite BR */
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-family: var(--fonte-terciaria); /* fonte do Google Playwrite BR */
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
-@media (min-width: 12rem) and (max-width: 75rem) { /*Dentro das chaves temos uma condição de 480px até 1200px telas para Tablets e telas menores*/
-
-    .cabecalho{
-        padding: 5% 5% 0% 5%; /* espaçamento: Superior Direito Inferior Esquerdo*/
-    }
-
-    .cabecalho__menu{
-        width: auto;
-        flex-direction: row; /* direção dos itens no modo de colunas */
-        gap: 0.5rem; /* espaço entre os itens */
-    }
-
-    .apresentacao {
-        flex-direction: column-reverse; /* direção dos itens no modo de colunas invertidas que é que desejamos.*/
-        padding: 10% 5%; /* espaçamento: Superior Direito */
-        width: auto;/* pega toda largura removando a configuração padrão é o mesmo que colocar 100%*/
-    }
-
-    .apresentacao__conteudo{
-        width: auto; /* pega toda largura removando a configuração padrão*/
-    }
-
-    .apresentacao__links__redesocial{
-        width: 100%; /* largura */
-        box-sizing: content-box; /* faz com que o padding e a borda aumentem o tamanho do elemento */
-    }
-
-    .rodape{
-        width: 100%; /* largura */
-    }
-
-}
